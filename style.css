@@ -861,3 +861,21 @@ details[open] > .case-body { margin-top: 1.1rem; }
 @media (max-width: 560px) {
   .intro .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* Clickable pills and buttons change colour on hover and keyboard focus */
+.files a:hover,
+.files a:focus-visible,
+details summary:hover,
+details summary:focus-visible {
+  background: var(--ink);
+  color: var(--bg);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--tone, var(--pink));
+}
+.files a, details summary { transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease; }
+.stat { transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease; }
+.stat:hover, .stat:focus-visible { background: var(--surface); color: var(--ink); }
+@media (prefers-reduced-motion: reduce) {
+  .files a, details summary, .stat { transition: none; }
+  .files a:hover, details summary:hover { transform: none; }
+}
