@@ -1003,3 +1003,43 @@ details summary:focus-visible {
 @media (max-width: 960px) {
   .plans { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Jump-to list of projects at the top of My Work */
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 2rem;
+  margin: -0.75rem 0 clamp(1.75rem, 4vw, 2.5rem);
+  padding: 0.9rem 1rem;
+  border: 1.5px dashed var(--line);
+  border-radius: var(--radius);
+}
+.toc-group { display: grid; gap: 0.45rem; }
+.toc-label {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.toc ul { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0; padding: 0; list-style: none; }
+.toc a {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--on-pastel);
+  text-decoration: none;
+  background: var(--tone);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.toc a:hover, .toc a:focus-visible {
+  background: var(--ink);
+  color: var(--bg);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--tone);
+}
+@media (prefers-reduced-motion: reduce) { .toc a { transition: none; } .toc a:hover { transform: none; } }
