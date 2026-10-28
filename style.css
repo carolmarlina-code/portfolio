@@ -1072,3 +1072,13 @@ details summary:focus-visible {
 @media (max-width: 560px) {
   .profile-photo { width: 96px; height: 96px; }
 }
+
+/* Photo styled like a sticker: white mat, pastel shadow, slight tilt */
+.profile-photo {
+  padding: 4px;
+  background: var(--surface);
+  border-radius: 14px;
+  box-shadow: 5px 5px 0 var(--pink);
+  transform: rotate(-2.5deg);
+}
+@media (prefers-reduced-motion: reduce) { .profile-photo { transform: none; } }
