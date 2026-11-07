@@ -551,6 +551,9 @@ details[open] .toggle::after { content: "Close \2212"; }
   border: var(--border) solid var(--line);
   border-radius: 8px;
 }
+.stack { display: grid; gap: 0.75rem; }
+.stack figure { margin: 0; }
+.stack img { border: var(--border) solid var(--line); border-radius: 8px; }
 figcaption {
   font-family: var(--mono);
   font-size: 0.72rem;
