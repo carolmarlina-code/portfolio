@@ -935,3 +935,8 @@ figcaption {
   .thumb-stat b { font-size: 1.5rem; }
   .more-toggle { margin-left: 0; }
 }
+
+/* Accessibility: skip link and slightly larger small print */
+.skip-link { position: absolute; left: 0.75rem; top: -4rem; z-index: 20; padding: 0.5rem 0.9rem; background: var(--ink); color: var(--bg); border-radius: 999px; font-weight: 600; text-decoration: none; }
+.skip-link:focus { top: 0.75rem; }
+.card-meta, figcaption { font-size: 0.75rem; }
