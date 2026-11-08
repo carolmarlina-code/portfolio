@@ -940,3 +940,16 @@ figcaption {
 .skip-link { position: absolute; left: 0.75rem; top: -4rem; z-index: 20; padding: 0.5rem 0.9rem; background: var(--ink); color: var(--bg); border-radius: 999px; font-weight: 600; text-decoration: none; }
 .skip-link:focus { top: 0.75rem; }
 .card-meta, figcaption { font-size: 0.75rem; }
+
+/* Download CV buttons */
+.intro-cta { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.intro-cta a.cv-link { background: var(--surface); color: var(--ink); }
+.intro-cta a.cv-link::after { content: " \2193"; }
+.intro-cta a.cv-link:hover, .intro-cta a.cv-link:focus-visible { background: var(--ink); color: var(--bg); }
+.contact-cta { margin-top: 1rem; }
+/* Contact links: comfortable tap targets on phones */
+.contact-list dd a { display: inline-flex; align-items: center; min-height: 44px; }
+@media (max-width: 560px) {
+  .contact-list div { padding-block: 0.35rem; }
+  .contact-cta a.cv-link { display: block; text-align: center; padding-block: 0.6rem; }
+}
